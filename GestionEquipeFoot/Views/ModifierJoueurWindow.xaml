@@ -1,0 +1,27 @@
+﻿<Window x:Class="GestionEquipeFoot.Views.ModifierJoueurWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Modifier un Joueur" Height="400" Width="400" WindowStartupLocation="CenterScreen" Background="#F5F5F5">
+
+    <Border Background="White" CornerRadius="10" Padding="20" Margin="20" BorderBrush="#DDD" BorderThickness="1">
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="250">
+
+            <TextBlock Text="Nom du Joueur" Margin="0 0 0 5"/>
+            <TextBox x:Name="NomJoueurTextBox" Height="30" Margin="0 0 0 15"/>
+
+            <TextBlock Text="Prénom du Joueur" Margin="0 0 0 5"/>
+            <TextBox x:Name="PrenomJoueurTextBox" Height="30" Margin="0 0 0 15"/>
+
+            <TextBlock Text="Numéro" Margin="0 0 0 5"/>
+            <TextBox x:Name="NumJoueurTextBox" Height="30" Margin="0 0 0 15"/>
+
+            <TextBlock Text="Poste" Margin="0 0 0 5"/>
+            <TextBox x:Name="PosteJoueurTextBox" Height="30" Margin="0 0 0 15"/>
+
+            <TextBlock Text="Équipe" Margin="0 0 0 5"/>
+            <ComboBox x:Name="EquipeComboBox" Height="30" Margin="0 0 0 15"/>
+
+            <Button Content="Modifier" Height="40" Background="#FFC107" Foreground="Black" Click="BtnModifier_Click"/>
+        </StackPanel>
+    </Border>
+</Window>

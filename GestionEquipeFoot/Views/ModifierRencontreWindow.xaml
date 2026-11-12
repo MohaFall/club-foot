@@ -1,0 +1,33 @@
+﻿<Window x:Class="GestionEquipeFoot.Views.ModifierRencontreWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Modifier une Rencontre" Height="300" Width="400">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Vertical" Margin="10">
+
+            <TextBlock Text="Date du match :" Margin="0,5"/>
+            <DatePicker x:Name="DateMatchPicker" Margin="0,5"/>
+
+            <TextBlock Text="Heure du match (HH:mm) :" Margin="0,5"/>
+            <TextBox x:Name="HeureMatchTextBox" Margin="0,5"/>
+
+            <TextBlock Text="Score Équipe 1 :" Margin="0,5"/>
+            <TextBox x:Name="Score1TextBox" Margin="0,5"/>
+
+            <TextBlock Text="Score Équipe 2 :" Margin="0,5"/>
+            <TextBox x:Name="Score2TextBox" Margin="0,5"/>
+
+        </StackPanel>
+
+
+        <Button Content="Enregistrer" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="10" Height="30" Width="100" Click="BtnEnregistrer_Click" Grid.Row="3"/>
+    </Grid>
+</Window>

@@ -1,0 +1,39 @@
+﻿<Window x:Class="GestionEquipeFoot.Views.EquipeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Liste des Équipes" Height="450" Width="700" WindowStartupLocation="CenterScreen" Background="#F5F5F5">
+
+    <Border Background="White" CornerRadius="10" Padding="15" Margin="20" BorderBrush="#DDD" BorderThickness="1">
+        <DockPanel>
+
+            <Button Content="Retour" Height="40" Width="100" Background="#2196F3" Foreground="White" Margin="0 0 0 10"
+                    DockPanel.Dock="Top" HorizontalAlignment="Left" Click="BtnRetour_Click"/>
+
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <DataGrid x:Name="EquipesDataGrid"
+              AutoGenerateColumns="False"
+              CanUserAddRows="False"
+              IsReadOnly="True"
+              Margin="10"
+              HeadersVisibility="Column"
+              GridLinesVisibility="All">
+
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Position" Binding="{Binding PositionEq}" Width="50" />
+                        <DataGridTextColumn Header="Équipe" Binding="{Binding NomEq}" Width="*" />
+                        <DataGridTemplateColumn Header="Photo" Width="100">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Image Source="{Binding Photo}" Height="50" Width="50" Stretch="Uniform"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+
+                </DataGrid>
+            </ScrollViewer>
+
+
+        </DockPanel>
+    </Border>
+</Window>

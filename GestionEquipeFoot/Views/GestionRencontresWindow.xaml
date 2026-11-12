@@ -1,0 +1,42 @@
+﻿<Window x:Class="GestionEquipeFoot.Views.GestionRencontresWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Gestion des Rencontres" Height="600" Width="800">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Boutons en haut -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10" Grid.Row="0">
+            <Button x:Name="BtnAjouter" Content="Ajouter" Width="100" Margin="5" Click="BtnAjouter_Click" />
+            <Button x:Name="BtnModifier" Content="Modifier" Width="100" Margin="5" Click="BtnModifier_Click" />
+            <Button x:Name="BtnSupprimer" Content="Supprimer" Width="100" Margin="5" Click="BtnSupprimer_Click" />
+            <Button x:Name="BtnRetour" Content="Retour" Width="100" Margin="5" Click="BtnRetour_Click" />
+        </StackPanel>
+
+        <!-- DataGrid en dessous -->
+        <DataGrid x:Name="RencontresDataGrid"
+                  AutoGenerateColumns="False"
+                  CanUserAddRows="False"
+                  IsReadOnly="True"
+                  HeadersVisibility="Column"
+                  GridLinesVisibility="All"
+                  Margin="0"
+                  Grid.Row="1">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Date" Binding="{Binding DateRencontre}" Width="150"/>
+                <DataGridTextColumn Header="Équipe 1" Binding="{Binding Equipe1}" Width="*"/>
+                <DataGridTextColumn Header="Score 1" Binding="{Binding ScoreEquipe1}" Width="80"/>
+                <DataGridTextColumn Header="Équipe 2" Binding="{Binding Equipe2}" Width="*"/>
+                <DataGridTextColumn Header="Score 2" Binding="{Binding ScoreEquipe2}" Width="80"/>
+            </DataGrid.Columns>
+
+        </DataGrid>
+
+    </Grid>
+
+</Window>

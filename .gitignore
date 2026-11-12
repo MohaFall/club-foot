@@ -1,0 +1,9 @@
+bin/
+obj/
+.vs/
+packages/
+*.user
+GestionEquipeFoot/db.config
+CLAUDE.md
+TODO.md
+docs/

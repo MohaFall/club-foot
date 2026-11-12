@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copy this file to db.config and put your own MySQL settings. db.config is ignored by Git. -->
+<connectionStrings>
+  <add name="FootDb" connectionString="server=localhost;database=club_foot;uid=root;pwd=YOUR_PASSWORD;" />
+</connectionStrings>

@@ -1,0 +1,18 @@
+﻿<Window x:Class="GestionEquipeFoot.Views.AjouterEquipeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Ajouter une Équipe" Height="300" Width="400" WindowStartupLocation="CenterScreen" Background="#F5F5F5">
+
+    <Border Background="White" CornerRadius="10" Padding="20" Margin="20" BorderBrush="#DDD" BorderThickness="1">
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="250">
+
+            <TextBlock Text="Nom de l'Équipe" Margin="0 0 0 5"/>
+            <TextBox x:Name="NomEquipeTextBox" Height="30" Margin="0 0 0 15"/>
+
+            <TextBlock Text="Classement" Margin="0 0 0 5"/>
+            <TextBox x:Name="ClassementTextBox" Height="30" Margin="0 0 0 15"/>
+
+            <Button Content="Ajouter" Height="40" Background="#4CAF50" Foreground="White" Click="BtnAjouter_Click"/>
+        </StackPanel>
+    </Border>
+</Window>

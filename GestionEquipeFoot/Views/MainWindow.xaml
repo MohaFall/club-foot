@@ -1,0 +1,22 @@
+﻿<Window x:Class="GestionEquipeFoot.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Gestion Équipe Foot" Height="470" Width="600" WindowStartupLocation="CenterScreen" Background="#F5F5F5">
+
+    <Border Background="White" CornerRadius="10" Padding="20" Margin="40" BorderBrush="#DDD" BorderThickness="1">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="300">
+
+            <TextBlock x:Name="BienvenueText" FontSize="22" FontWeight="Bold" Foreground="#333" TextAlignment="Center" Margin="0 0 0 20"/>
+
+            <Button x:Name="BtnEquipes" Content="Voir les Équipes" Height="40" Margin="0 5" Background="#2196F3" Foreground="White" Click="BtnEquipes_Click"/>
+            <Button x:Name="BtnJoueurs" Content="Voir les Joueurs" Height="40" Margin="0 5" Background="#2196F3" Foreground="White" Click="BtnJoueurs_Click"/>
+            <Button x:Name="BtnRencontres" Content="Voir les Matchs" Height="40" Margin="0 5" Background="#2196F3" Foreground="White" Click="BtnRencontres_Click"/>
+
+            <StackPanel x:Name="AdminPanel" Visibility="Collapsed" Margin="0 15 0 0">
+                <Button Content="Gérer Données" Height="40" Margin="0 5" Background="#4CAF50" Foreground="White" Click="BtnGestionAdmin_Click"/>
+            </StackPanel>
+
+            <Button Content="Se déconnecter" Height="40" Margin="0 20 0 0" Background="#F44336" Foreground="White" Click="BtnDeconnexion_Click"/>
+        </StackPanel>
+    </Border>
+</Window>

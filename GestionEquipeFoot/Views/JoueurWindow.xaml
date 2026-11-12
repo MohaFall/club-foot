@@ -1,0 +1,32 @@
+﻿<Window x:Class="GestionEquipeFoot.Views.JoueurWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Liste des Joueurs" Height="450" Width="700" WindowStartupLocation="CenterScreen" Background="#F5F5F5">
+
+    <Border Background="White" CornerRadius="10" Padding="15" Margin="20" BorderBrush="#DDD" BorderThickness="1">
+        <DockPanel>
+
+            <Button Content="Retour" Height="40" Width="100" Background="#2196F3" Foreground="White" Margin="0 0 0 10"
+                    DockPanel.Dock="Top" HorizontalAlignment="Left" Click="BtnRetour_Click"/>
+
+            <DataGrid x:Name="JoueursDataGrid"
+                      AutoGenerateColumns="False"
+                      HeadersVisibility="Column"
+                      CanUserAddRows="False"
+                      IsReadOnly="True"
+                      AlternatingRowBackground="#F0F0F0"
+                      GridLinesVisibility="Horizontal"
+                      RowHeight="50"
+                      FontSize="14">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Nom" Binding="{Binding NomJoueur}" Width="*" />
+                    <DataGridTextColumn Header="Prénom" Binding="{Binding PrenomJoueur}" Width="*" />
+                    <DataGridTextColumn Header="Numéro" Binding="{Binding NumJoueur}" Width="100" />
+                    <DataGridTextColumn Header="Poste" Binding="{Binding PosteJoueur}" Width="*" />
+                    <DataGridTextColumn Header="Équipe" Binding="{Binding NomEquipe}" Width="*" />
+                </DataGrid.Columns>
+            </DataGrid>
+
+        </DockPanel>
+    </Border>
+</Window>
